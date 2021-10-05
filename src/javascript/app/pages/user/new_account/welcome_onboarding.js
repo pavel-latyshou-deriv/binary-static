@@ -70,7 +70,6 @@ const WelcomePageOnboarding = (() => {
     };
     
     const onUnload = () => {
-        console.log('kell');
         cfd.removeEventListener('click', onClickCFD);
         d_options.removeEventListener('click', onClickDigitalOptions);
         not_sure.removeEventListener('click', onClickNotSure);
