@@ -175,7 +175,7 @@ const BinaryLoader = (() => {
             }
         });
 
-        BinarySocket.setOnDisconnect(active_script.onDisconnect);
+        BinarySocket.setOnDisconnect(active_script && active_script.onDisconnect);
     };
 
     const loadActiveScript = (config) => {
