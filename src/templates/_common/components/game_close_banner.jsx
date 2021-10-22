@@ -33,7 +33,7 @@ export default class GameCloseBanner extends Component {
                         <p>Please proceed to withdraw your funds.</p>
                     </div>
                 </div>
-                <div onClick={() => this.showPopup} className='close_banner_btn'>{it.L('Learn more')}</div>
+                <div onClick={this.showPopup} className='close_banner_btn'>{it.L('Learn more')}</div>
                 {this.state.popup && <GamingClosePopup />}
             </div>
         );
