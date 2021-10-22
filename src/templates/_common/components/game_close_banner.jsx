@@ -1,21 +1,8 @@
 /* eslint-disable no-console */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-// eslint-disable-next-line import/no-unresolved
-import GamingClosePopup from './gaming_close_popup';
 
 export default class GameCloseBanner extends Component {
-    state = {
-        popup: false,
-    }
-
-    showPopup = () => {
-        console.log(12);
-        this.setState({
-            popup: true,
-        });
-    }
-
     render() {
         const { has_margin } = this.props;
         return (
@@ -33,8 +20,7 @@ export default class GameCloseBanner extends Component {
                         <p>Please proceed to withdraw your funds.</p>
                     </div>
                 </div>
-                <div onClick={this.showPopup} className='close_banner_btn'>{it.L('Learn more')}</div>
-                {this.state.popup && <GamingClosePopup />}
+                <div id='close_banner_btn' className='close_banner_btn'>{it.L('Learn more')}</div>
             </div>
         );
     }

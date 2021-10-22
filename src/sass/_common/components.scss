@@ -623,6 +623,7 @@
             }
         }
         &_btn {
+            cursor: pointer;
             display: flex;
             align-self: center;
             margin: 0 40px;
@@ -672,8 +673,11 @@
         @media (max-width: 768px) {
             top: 20px;
             left: auto;
+            -webkit-transform: none;
             transform: none;
             margin: 0 auto;
+            max-height: 80vh;
+            overflow: auto;
         }
     }
     .popup-content-body {

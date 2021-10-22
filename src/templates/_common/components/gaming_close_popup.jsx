@@ -1,8 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 const GamingClosePopup = () => (
-    <div className='gaming-close-popup'>
+    <div id='gaming-close-popup' className='gaming-close-popup'>
         <div className='popup-content'>
             <div className='pop-up-header'>
                 <h3>Your Gaming account is scheduled to be closed</h3>
@@ -25,14 +24,10 @@ const GamingClosePopup = () => (
                 <p>Please proceed to withdraw all your funds from your Gaming account.</p>
             </div>
             <footer>
-                <button className='accept-btn'>OK, I understand</button>
+                <button id='accept-btn' className='accept-btn'>OK, I understand</button>
             </footer>
         </div>
     </div>
 );
-
-GamingClosePopup.propTypes = {
-    has_margin: PropTypes.bool,
-};
 
 export default GamingClosePopup;
