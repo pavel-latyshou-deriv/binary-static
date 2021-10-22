@@ -10,8 +10,9 @@ const GamingClosePopup = () => (
                 As part of the changes in our product line-up,
                 we will be closing Gaming accounts belonging to UK clients.
                 </p>
+                <div className='deriv_banner_close' />
             </div>
-            <div className='popup-content'>
+            <div className='popup-content-body'>
                 <strong>What this means for you</strong>
                 <p>
                     You can no longer trade digital options on DTrader, SmartTrader, DBot, and Binary Bot.
@@ -23,6 +24,9 @@ const GamingClosePopup = () => (
                 <strong>What you need to do now</strong>
                 <p>Please proceed to withdraw all your funds from your Gaming account.</p>
             </div>
+            <footer>
+                <button className='accept-btn'>OK, I understand</button>
+            </footer>
         </div>
     </div>
 );
