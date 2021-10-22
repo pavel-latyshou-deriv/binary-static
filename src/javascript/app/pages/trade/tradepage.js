@@ -13,6 +13,7 @@ const Header            = require('../../base/header');
 const BinarySocket      = require('../../base/socket');
 const DerivBanner       = require('../../common/deriv_banner');
 const CloseBanner       = require('../../common/game_close_banner');
+const ClosePopup       = require('../../common/game_close_popup');
 const Guide             = require('../../common/guide');
 const TopUpVirtualPopup = require('../../pages/user/account/top_up_virtual/pop_up');
 const State             = require('../../../_common/storage').State;
@@ -26,6 +27,7 @@ const TradePage = (() => {
             const is_uk_residence = (Client.get('residence') === 'gb' || State.getResponse('website_status.clients_country') === 'gb');
             if (is_uk_residence) {
                 CloseBanner.onLoad();
+                ClosePopup.onLoad();
             } else {
                 DerivBanner.onLoad();
             }
