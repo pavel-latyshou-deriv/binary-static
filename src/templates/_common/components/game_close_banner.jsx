@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const CloseBanner = ({ has_margin }) => (
+const GameCloseBanner = ({ has_margin }) => (
   <div
     id="close_banner_container"
     className={`invisible ${has_margin ? "has_margin" : ""}`}
@@ -20,8 +20,8 @@ const CloseBanner = ({ has_margin }) => (
   </div>
 );
 
-CloseBanner.propTypes = {
+GameCloseBanner.propTypes = {
   has_margin: PropTypes.bool,
 };
 
-export default CloseBanner;
+export default GameCloseBanner;
