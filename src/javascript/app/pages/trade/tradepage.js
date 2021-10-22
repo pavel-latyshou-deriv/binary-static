@@ -24,9 +24,8 @@ const TradePage = (() => {
     const onLoad = () => {
         BinarySocket.wait('authorize', 'website_status', 'landing_company').then(() => {
             const is_uk_residence = (Client.get('residence') === 'gb' || State.getResponse('website_status.clients_country') === 'gb');
-            console.log(is_uk_residence);
             if (is_uk_residence) {
-                CloseBanner.onLoad()
+                CloseBanner.onLoad();
             } else {
                 DerivBanner.onLoad();
             }
