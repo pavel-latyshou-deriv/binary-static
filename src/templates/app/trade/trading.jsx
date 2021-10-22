@@ -3,7 +3,7 @@ import Analysis from './analysis.jsx';
 import Portfolio from '../user/portfolio.jsx';
 import Loading from '../../_common/components/loading.jsx';
 import DerivBanner from '../../_common/components/deriv_banner.jsx';
-import CloseBanner from '../../_common/components/close_banner.jsx';
+import CloseBanner from '../../_common/components/game_close_banner.jsx';
 
 const Trading = () => (
     <React.Fragment>
