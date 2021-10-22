@@ -10,6 +10,7 @@ const ClosePopup = (() => {
     };
 
     const onClosePopup = () => {
+        console.log('12313');
         el_gaming_popup.setVisibility(0);
     };
 
