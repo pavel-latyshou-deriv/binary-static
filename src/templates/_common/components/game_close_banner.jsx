@@ -16,7 +16,7 @@ const GameCloseBanner = ({ has_margin }) => (
         <p>Please proceed to withdraw your funds.</p>
       </div>
       </div>
-      <div className="close_banner_btn">{it.L("Learn more")}</div>
+      <div className="close_banner_btn"><p>{it.L("Learn more")}</p></div>
   </div>
 );
 
