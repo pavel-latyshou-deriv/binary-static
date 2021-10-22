@@ -552,7 +552,6 @@
 
         &_text {
             display: flex;
-            flex-direction: column;
             justify-content: center;
             // margin-right: 17%;
             // width: 50%;
@@ -563,30 +562,36 @@
             // justify-content: space-evenly;
             // color: $COLOR_WHITE;
 
+            &_wrapper {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
             @media only screen and (max-width: 768px) {
                 width: 60%;
             }
 
-            > div:first-of-type {
-                flex: auto;
-                margin-left: 64px;
+            // > div:first-of-type {
+            //     flex: auto;
+            //     margin-left: 64px;
 
-                @media only screen and (max-width: 900px) {
-                    padding-right: 30px;
-                }
-                @media only screen and (max-width: 550px) {
-                    padding-right: 25px;
-                    margin-left: 45px;
-                }
-            }
-            > div:last-of-type {
-                flex: none;
-                padding: 0 36px 0 15px;
+            //     @media only screen and (max-width: 900px) {
+            //         padding-right: 30px;
+            //     }
+            //     @media only screen and (max-width: 550px) {
+            //         padding-right: 25px;
+            //         margin-left: 45px;
+            //     }
+            // }
+            // > div:last-of-type {
+            //     flex: none;
+            //     padding: 0 36px 0 15px;
 
-                @media only screen and (max-width: 900px) {
-                    display: none;
-                }
-            }
+            //     @media only screen and (max-width: 900px) {
+            //         display: none;
+            //     }
+            // }
             h3, p {
                 // font-size: $FONT_SIZE_N;
                 // color: $COLOR_WHITE;

@@ -11,8 +11,10 @@ const CloseBanner = ({ has_margin }) => (
       src={it.url_for(`images/close-banner/icon_left.png`)}
       className="close_banner_img"
     />
+      <div className='close_banner_text_wrapper'>
         <h3>Your Gaming Acount is scheduled to be closed</h3>
         <p>Please proceed to withdraw your funds.</p>
+      </div>
       </div>
       <div className="close_banner_btn">{it.L("Learn more")}</div>
   </div>
