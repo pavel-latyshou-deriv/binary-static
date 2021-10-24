@@ -2,7 +2,7 @@ const getElementById = require('../../_common/common_functions').getElementById;
 
 const CloseBanner = (() => {
 
-    let el_close_banner_container, el_gaming_popup, el_learn_more
+    let el_close_banner_container, el_gaming_popup, el_learn_more;
 
     const onLoad = () => {
         el_close_banner_container = getElementById('close_banner_container');
