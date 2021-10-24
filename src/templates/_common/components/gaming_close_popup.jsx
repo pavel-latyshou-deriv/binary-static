@@ -1,7 +1,7 @@
 import React from 'react';
 
 const GamingClosePopup = () => (
-    <div id='gaming-close-popup' className='gaming-close-popup'>
+    <div id='gaming-close-popup' className='invisible gaming-close-popup'>
         <div className='popup-content'>
             <div className='pop-up-header'>
                 <h3>Your Gaming account is scheduled to be closed</h3>
