@@ -12,7 +12,7 @@ const GameCloseBanner = ({ has_margin }) => (
                 className='close_banner_img'
             />
             <div className='close_banner_text_wrapper'>
-                <h3>Your Gaming Acount is scheduled to be closed</h3>
+                <h3>Your Gaming Account is scheduled to be closed</h3>
                 <p>Please proceed to withdraw your funds before 30 November 2021.</p>
             </div>
         </div>
