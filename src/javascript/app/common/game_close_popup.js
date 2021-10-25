@@ -12,6 +12,7 @@ const ClosePopup = (() => {
 
     const onClosePopup = () => {
         el_gaming_popup.setVisibility(0);
+        document.body.style.overflow = "auto";
     };
 
     return { onLoad, onClosePopup };

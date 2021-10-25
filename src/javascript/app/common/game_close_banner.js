@@ -16,6 +16,7 @@ const CloseBanner = (() => {
 
     const onShowPopup = () => {
         el_gaming_popup.setVisibility(1);
+        document.body.style.overflow = "hidden";
     };
 
     return { onLoad, onShowPopup };
