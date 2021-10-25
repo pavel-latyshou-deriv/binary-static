@@ -20,6 +20,13 @@ const ClosePopup = (() => {
             }
             el_gaming_popup.setVisibility(0);
             el_accept_btn.addEventListener('click', onClosePopup);
+
+            
+                BinarySocket.wait('authorize').then(() => {
+                    console.log(Client.getAllLoginids());
+                    
+                });
+            
         });
     };
 
