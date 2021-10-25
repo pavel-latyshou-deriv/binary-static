@@ -25,7 +25,11 @@ const TradePage = (() => {
     const onLoad = () => {
         BinarySocket.wait('authorize', 'website_status', 'landing_company').then(() => {
             const is_uk_residence = (Client.get('residence') === 'gb' || State.getResponse('website_status.clients_country') === 'gb');
+            const is_iom_client = (Client.get('residence') === 'im' || State.getResponse('website_status.clients_country') === 'im');
             if (is_uk_residence) {
+                CloseBanner.onLoad();
+                ClosePopup.onLoad();
+            } else if (is_iom_client) {
                 CloseBanner.onLoad();
                 ClosePopup.onLoad();
             } else {
