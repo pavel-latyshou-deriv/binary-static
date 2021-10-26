@@ -16,7 +16,7 @@ const GameCloseBannerIom = ({ has_margin }) => (
                 <p>Please proceed to withdraw your funds before 30 November 2021.</p>
             </div>
         </div>
-        <div id='close_banner_btn' className='close_banner_btn'><p>{it.L('Learn more')}</p></div>
+        <div id='close_banner_btn_iom' className='close_banner_btn'><p>{it.L('Learn more')}</p></div>
     </div>
 );
 
