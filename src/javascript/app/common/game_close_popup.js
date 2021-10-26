@@ -5,15 +5,11 @@ const State             = require('../../_common/storage').State;
 
 const ClosePopup = (() => {
     let el_gaming_popup, el_accept_btn;
-    
-    // eslint-disable-next-line
-    console.log('hi')
+
     const onLoad = () => {
         BinarySocket.wait('authorize', 'website_status', 'landing_company').then(() => {
             const is_uk_residence = (Client.get('residence') === 'gb' || State.getResponse('website_status.clients_country') === 'gb');
             const is_iom_client = (Client.get('residence') === 'im' || State.getResponse('website_status.clients_country') === 'im');
-            // eslint-disable-next-line
-            console.log(is_iom_client)
             if (is_uk_residence) {
                 el_gaming_popup = getElementById('gaming-close-popup');
                 el_accept_btn = getElementById('accept-btn');
