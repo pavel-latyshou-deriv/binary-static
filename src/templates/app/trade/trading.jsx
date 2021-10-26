@@ -5,6 +5,7 @@ import Loading from '../../_common/components/loading.jsx';
 import DerivBanner from '../../_common/components/deriv_banner.jsx';
 import GameCloseBanner from '../../_common/components/game_close_banner.jsx';
 import GamingClosePopup from '../../_common/components/gaming_close_popup.jsx';
+import GamingClosePopupIom from '../../_common/components/gaming_close_popup_iom.jsx';
 
 const Trading = () => (
     <React.Fragment>
@@ -12,6 +13,7 @@ const Trading = () => (
             <DerivBanner />
             <GameCloseBanner />
             <GamingClosePopup />
+            <GamingClosePopupIom />
             <div id='notifications_wrapper' />
             <div id='loading_container' className='overlay_container' />
             <a id='deposit_btn_trade' className='client_real invisible gr-hide-m button' href={it.url_for('cashier/forwardws?action=deposit')}>

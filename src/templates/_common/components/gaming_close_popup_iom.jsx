@@ -1,13 +1,13 @@
 import React from 'react';
 
-const GamingClosePopup = () => (
-    <div id='gaming-close-popup' className='invisible gaming-close-popup'>
+const GamingClosePopupIom = () => (
+    <div id='gaming-close-popup-iom' className='invisible gaming-close-popup'>
         <div className='popup-content'>
             <div className='pop-up-header'>
                 <h3>Your Gaming Account is scheduled to be closed</h3>
                 <p className='subtitle'>
                 As part of the changes in our product line-up, we will
-                be closing Gaming Accounts belonging to our UK clients.
+                be closing Gaming Accounts belonging to our Isle of Man clients.
                 </p>
                 <div className='deriv_banner_close' />
             </div>
@@ -26,10 +26,10 @@ const GamingClosePopup = () => (
                 </p>
             </div>
             <footer>
-                <button id='accept-btn' className='accept-btn'>OK, I understand</button>
+                <button id='accept-btn-iom' className='accept-btn'>OK, I understand</button>
             </footer>
         </div>
     </div>
 );
 
-export default GamingClosePopup;
+export default GamingClosePopupIom;
