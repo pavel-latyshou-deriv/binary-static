@@ -127,10 +127,10 @@ const Page = (() => {
                 const is_uk_residence = (Client.get('residence') === 'gb' || State.getResponse('website_status.clients_country') === 'gb');
                 const is_iom_client = (Client.get('residence') === 'im' || State.getResponse('website_status.clients_country') === 'im');
                 if (is_uk_residence && Client.hasAccountType('gaming')) {
-                ClosePopup.loginOnLoad();
+                    ClosePopup.loginOnLoad();
                 } else if (is_iom_client && Client.hasAccountType('gaming')) {
-                ClosePopup.loginOnLoad();
-                } 
+                    ClosePopup.loginOnLoad();
+                }
             });
         } else {
             Menu.init();

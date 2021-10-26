@@ -30,8 +30,8 @@ const CloseBanner = (() => {
 
     const onShowPopup = () => {
         el_gaming_popup.setVisibility(1);
-        let el_top_bar = getElementById('topbar')
-        el_top_bar.style.zIndex = 0
+        const el_top_bar = getElementById('topbar');
+        el_top_bar.style.zIndex = 0;
         document.body.style.overflow = 'hidden';
     };
 
