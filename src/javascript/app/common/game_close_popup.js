@@ -1,7 +1,7 @@
 const getElementById = require('../../_common/common_functions').getElementById;
 const BinarySocket = require('../base/socket');
-const Client            = require('../base/client');
-const State             = require('../../_common/storage').State;
+const Client = require('../base/client');
+const State = require('../../_common/storage').State;
 
 const ClosePopup = (() => {
     let el_gaming_popup, el_accept_btn;
@@ -19,17 +19,19 @@ const ClosePopup = (() => {
             }
             el_gaming_popup.setVisibility(0);
             el_accept_btn.addEventListener('click', onClosePopup);
-            
-            BinarySocket.wait('authorize').then(() => {
-                // eslint-disable-next-line
-                console.log(Client.getAllLoginids());
-            });
-        
+
+            // BinarySocket.wait('authorize').then(() => {
+            //     // eslint-disable-next-line
+            //     console.log(Client.getAllLoginids());
+            // });
+
         });
     };
 
     const onClosePopup = () => {
         el_gaming_popup.setVisibility(0);
+        let el_top_bar = getElementById('topbar');
+        el_top_bar.style.zIndex = 4;
         document.body.style.overflow = 'auto';
     };
 

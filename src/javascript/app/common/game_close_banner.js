@@ -1,7 +1,7 @@
 const getElementById = require('../../_common/common_functions').getElementById;
 const BinarySocket = require('../base/socket');
-const Client            = require('../base/client');
-const State             = require('../../_common/storage').State;
+const Client = require('../base/client');
+const State = require('../../_common/storage').State;
 
 const CloseBanner = (() => {
 
@@ -29,6 +29,8 @@ const CloseBanner = (() => {
 
     const onShowPopup = () => {
         el_gaming_popup.setVisibility(1);
+        let el_top_bar = getElementById('topbar')
+        el_top_bar.style.zIndex = 0
         document.body.style.overflow = 'hidden';
     };
 
