@@ -19,18 +19,12 @@ const ClosePopup = (() => {
             }
             el_gaming_popup.setVisibility(0);
             el_accept_btn.addEventListener('click', onClosePopup);
-
-            // BinarySocket.wait('authorize').then(() => {
-            //     // eslint-disable-next-line
-            //     console.log(Client.getAllLoginids());
-            // });
-
         });
     };
 
     const onClosePopup = () => {
         el_gaming_popup.setVisibility(0);
-        let el_top_bar = getElementById('topbar');
+        const el_top_bar = getElementById('topbar');
         el_top_bar.style.zIndex = 4;
         document.body.style.overflow = 'auto';
     };

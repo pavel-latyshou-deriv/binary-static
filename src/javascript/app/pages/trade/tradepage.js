@@ -26,10 +26,10 @@ const TradePage = (() => {
         BinarySocket.wait('authorize', 'website_status', 'landing_company').then(() => {
             const is_uk_residence = (Client.get('residence') === 'gb' || State.getResponse('website_status.clients_country') === 'gb');
             const is_iom_client = (Client.get('residence') === 'im' || State.getResponse('website_status.clients_country') === 'im');
-            if (is_uk_residence && Client.hasAccountType('real')) {
+            if (is_uk_residence && Client.hasAccountType('gaming')) {
                 CloseBanner.onLoad();
                 ClosePopup.onLoad();
-            } else if (is_iom_client && Client.hasAccountType('real')) {
+            } else if (is_iom_client && Client.hasAccountType('gaming')) {
                 CloseBanner.onLoad();
                 ClosePopup.onLoad();
             } else {
