@@ -21,7 +21,7 @@ const GamingClosePopup = () => (
                 Any open positions on digital options have been closed with full payout.
                 </p>
                 <strong>What you need to do now</strong>
-                <p>Please proceed to withdraw all your funds from your Gaming Account 
+                <p>Please proceed to withdraw all your funds from your Gaming Account
                     before <strong>30 November 2021</strong>.
                 </p>
             </div>

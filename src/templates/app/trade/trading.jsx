@@ -4,6 +4,7 @@ import Portfolio from '../user/portfolio.jsx';
 import Loading from '../../_common/components/loading.jsx';
 import DerivBanner from '../../_common/components/deriv_banner.jsx';
 import GameCloseBanner from '../../_common/components/game_close_banner.jsx';
+import GameCloseBannerIom from '../../_common/components/game_close_banner_iom.jsx';
 import GamingClosePopup from '../../_common/components/gaming_close_popup.jsx';
 import GamingClosePopupIom from '../../_common/components/gaming_close_popup_iom.jsx';
 
@@ -12,6 +13,7 @@ const Trading = () => (
         <div id='trading_socket_container'>
             <DerivBanner />
             <GameCloseBanner />
+            <GameCloseBannerIom />
             <GamingClosePopup />
             <GamingClosePopupIom />
             <div id='notifications_wrapper' />

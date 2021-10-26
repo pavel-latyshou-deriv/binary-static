@@ -3,36 +3,38 @@ const BinarySocket = require('../base/socket');
 const Client            = require('../base/client');
 const State             = require('../../_common/storage').State;
 
-
 const ClosePopup = (() => {
     let el_gaming_popup, el_accept_btn;
     
+    // eslint-disable-next-line
+    console.log('hi')
     const onLoad = () => {
         BinarySocket.wait('authorize', 'website_status', 'landing_company').then(() => {
             const is_uk_residence = (Client.get('residence') === 'gb' || State.getResponse('website_status.clients_country') === 'gb');
             const is_iom_client = (Client.get('residence') === 'im' || State.getResponse('website_status.clients_country') === 'im');
+            // eslint-disable-next-line
+            console.log(is_iom_client)
             if (is_uk_residence) {
-                el_gaming_popup = getElementById('gaming-close-popup'); 
-                el_accept_btn = getElementById('accept-btn'); 
+                el_gaming_popup = getElementById('gaming-close-popup');
+                el_accept_btn = getElementById('accept-btn');
             } else if (is_iom_client) {
                 el_gaming_popup = getElementById('gaming-close-popup-iom');
-                el_accept_btn = getElementById('accept-btn-iom'); 
+                el_accept_btn = getElementById('accept-btn-iom');
             }
             el_gaming_popup.setVisibility(0);
             el_accept_btn.addEventListener('click', onClosePopup);
-
             
-                BinarySocket.wait('authorize').then(() => {
-                    console.log(Client.getAllLoginids());
-                    
-                });
-            
+            BinarySocket.wait('authorize').then(() => {
+                // eslint-disable-next-line
+                console.log(Client.getAllLoginids());
+            });
+        
         });
     };
 
     const onClosePopup = () => {
         el_gaming_popup.setVisibility(0);
-        document.body.style.overflow = "auto";
+        document.body.style.overflow = 'auto';
     };
 
     return { onLoad, onClosePopup };
