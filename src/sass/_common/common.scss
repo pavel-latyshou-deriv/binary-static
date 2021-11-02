@@ -92,6 +92,10 @@ button.button-disabled {
     }
 }
 
+a.button-disabled {
+    pointer-events: none;
+}
+
 span.checked {
     background: url('../images/pages/authenticate/checked.svg') no-repeat;
     width: 16px;
@@ -207,6 +211,9 @@ label {
 .form-row {
     padding: 10px 0;
 
+    .required_field_label {
+        font-size: 13px;
+    }
     div:first-child label {
         display: block;
         text-align: right;
@@ -246,6 +253,10 @@ label {
 
 .full-width {
     width: 100%;
+}
+
+.strong {
+    font-weight: bold;
 }
 
 .width-50 {
@@ -393,6 +404,20 @@ input[type=checkbox] {
 .logged_out_title_container {
     margin-top: 40px;
     margin-bottom: 40px;
+    text-align: center;
+}
+
+.signup-warning-message {
+    padding-bottom: 40px;
+}
+
+.padding-2rem {
+    padding: 2rem;
+}
+
+.padding-x-30 {
+    padding-right: 30px !important;
+    padding-left: 30px !important;
 }
 
 .red {
