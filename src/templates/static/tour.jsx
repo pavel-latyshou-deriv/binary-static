@@ -4,7 +4,7 @@ import PaymentLogo from '../_common/components/payment_logo.jsx';
 const Tour = () => (
     <div className='tour container'>
         <div className='static_full'>
-            <div className='section border-bottom'>
+            <div className='section border-bottom' data-show='-gbcountry'>
                 <div className='section-content center-text gr-padding-30 gr-parent'>
                     <h1>{it.L('First, define your position...')}</h1>
                     <p>{it.L('When you start trading with [_1], you\'ll be directed to the trading screen, where you set your trading parameters, and choose what you want to trade, how and when.', it.website_name)}</p>
@@ -13,7 +13,7 @@ const Tour = () => (
                     </a>
                 </div>
             </div>
-            <div className='section border-bottom'>
+            <div className='section border-bottom' data-show='-gbcountry'>
                 <div className='section-content center-text gr-padding-30'>
                     <h1>{it.L('2-way pricing')}</h1>
                     <p>{it.L('Simply change any of your parameters and the trade price instantly changes, giving you real-time knowledge of your stake. [_1] ensures fair and transparent pricing by showing you both sides of the trade.', it.website_name)}</p>
@@ -31,7 +31,7 @@ const Tour = () => (
                     </div>
                 </div>
             </div>
-            <div className='section border-bottom'>
+            <div className='section border-bottom' data-show='-gbcountry'>
                 <div className='section-content center-text gr-padding-30'>
                     <h1>{it.L('Then, make your trade')}</h1>
                     <p>{it.L('As soon as you click on the \'PURCHASE\' button, your trade registers in your account. The price of your trade continues to update in real time.')}</p>
