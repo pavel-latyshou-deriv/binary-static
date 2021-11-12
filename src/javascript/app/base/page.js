@@ -133,7 +133,7 @@ const Page = (() => {
                 } else if (is_iom_client && Client.hasAccountType('gaming')) {
                     ClosePopup.loginOnLoad();
                 } else if (mlt_check) {
-                    EuClosePopup.loginOnLoad()
+                    EuClosePopup.loginOnLoad();
                 }
             });
         } else {

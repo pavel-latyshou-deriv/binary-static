@@ -18,11 +18,7 @@ const EuCloseBanner    = require('../../common/eu_close_baner');
 const Guide             = require('../../common/guide');
 const TopUpVirtualPopup = require('../../pages/user/account/top_up_virtual/pop_up');
 const State             = require('../../../_common/storage').State;
-const isEuCountry   = require('../../common/country_base').isEuCountry;
 const ClientBase       = require('../../../_common/base/client_base');
-
-
-
 
 const TradePage = (() => {
     let events_initialized = 0;
@@ -31,18 +27,16 @@ const TradePage = (() => {
         BinarySocket.wait('authorize', 'website_status', 'landing_company').then(() => {
             const is_uk_residence = (Client.get('residence') === 'gb' || State.getResponse('website_status.clients_country') === 'gb');
             const is_iom_client = (Client.get('residence') === 'im' || State.getResponse('website_status.clients_country') === 'im');
-            const mlt_check = ClientBase.get('landing_company_shortcode') === 'malta';    
+            const mlt_check = ClientBase.get('landing_company_shortcode') === 'malta';
             if (is_uk_residence && Client.hasAccountType('gaming')) {
                 CloseBanner.onLoad();
                 ClosePopup.onLoad();
             } else if (is_iom_client && Client.hasAccountType('gaming')) {
                 CloseBanner.onLoad();
-                ClosePopup.onLoad();                
-            } 
-            else if (mlt_check) {
-                EuCloseBanner.onLoad()
-            }
-             else {
+                ClosePopup.onLoad();
+            } else if (mlt_check) {
+                EuCloseBanner.onLoad();
+            } else {
                 DerivBanner.onLoad();
             }
         });

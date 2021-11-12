@@ -12,7 +12,7 @@ import GamingClosePopup from '../components/gaming_close_popup.jsx';
 import GameCloseBanner from '../components/game_close_banner.jsx';
 import GameCloseBannerIom from '../components/game_close_banner_iom.jsx';
 import EuCloseBanner from '../components/eu_close_banner.jsx';
-import EuClosePopup from '../components/eu_close_popup';
+import EuClosePopup from '../components/eu_close_popup.jsx';
 
 export const CONTENT_PLACEHOLDER = 'CONTENT_PLACEHOLDER';
 
