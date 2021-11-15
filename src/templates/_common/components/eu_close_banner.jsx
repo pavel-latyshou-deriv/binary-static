@@ -12,7 +12,7 @@ const EuCloseBanner = ({ has_margin }) => (
                 className='close_banner_img'
             />
             <div className='close_banner_text_wrapper'>
-                <h3>Your Gaming Account is scheduled to be closed</h3>
+                <h3>Your Options Account is scheduled to be closed</h3>
                 <p>Withdraw all funds from your Options Account.</p>
             </div>
         </div>

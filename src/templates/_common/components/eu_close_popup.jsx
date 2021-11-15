@@ -4,7 +4,7 @@ const EuClosePopup = () => (
     <div id='eu-close-popup' className='invisible gaming-close-popup'>
         <div className='popup-content'>
             <div className='pop-up-header'>
-                <h3>Your Gaming Account is scheduled to be closed</h3>
+                <h3>Your Options Account is scheduled to be closed</h3>
                 <p className='subtitle'>
                     As part of the changes in our product line-up, we will be closing Options
                     Accounts belonging to our clients in Europe.
