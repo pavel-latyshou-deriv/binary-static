@@ -615,6 +615,30 @@
     }
 }
 
+@media (max-width: 506px) {
+    #eu_close_banner_container .close_banner_text_wrapper {
+        padding: 7px 0px 7px 8px;
+        width: 240px !important;
+        background-image: url('../../images/close-banner/orange-bg.png');
+        background-repeat: no-repeat;
+        background-size: 99% 100%;
+    }
+}
+
+@media (max-width: 360px) {
+    #eu_close_banner_container {
+        justify-content: unset;
+    }
+    #eu_close_banner_container .close_banner_btn {
+        position: absolute;
+        left: 235px;
+        margin: 10px !important;
+        width: 80px;
+        font-size: 1rem !important;
+        margin-left: 8px !important;
+    }
+}
+
 #close_banner_container {
     display: flex;
     justify-content: space-between;
