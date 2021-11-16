@@ -59,6 +59,7 @@ const Layout = () => {
                         <GameCloseBanner />
                         <GameCloseBannerIom />
                         <EuCloseBanner />
+                        <EuClosePopup />
                         <RedirectBanner />
                         <InnerContent />
                     </div>
@@ -67,7 +68,6 @@ const Layout = () => {
                 <InterviewPopup /> {/* TODO: remove when UX research is finished */}
                 <Elevio />
                 <LiveChat />
-                <EuClosePopup />
                 <GamingClosePopup />
                 <GamingClosePopupIom />
             </body>

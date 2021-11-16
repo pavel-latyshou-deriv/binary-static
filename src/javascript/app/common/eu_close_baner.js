@@ -15,7 +15,6 @@ const EuCloseBanner = (() => {
                 el_close_banner_container.setVisibility(1);
                 el_learn_more = getElementById('eu_close_banner_btn');
             }
-            el_gaming_popup.setVisibility(0);
             el_learn_more.addEventListener('click', onShowPopup);
         });
 

@@ -34,8 +34,6 @@ const TradePage = (() => {
             } else if (is_iom_client && Client.hasAccountType('gaming')) {
                 CloseBanner.onLoad();
                 ClosePopup.onLoad();
-            } else if (mlt_check) {
-                EuCloseBanner.onLoad();
             } else {
                 DerivBanner.onLoad();
             }

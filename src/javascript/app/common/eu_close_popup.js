@@ -3,13 +3,14 @@ const getElementById = require('../../_common/common_functions').getElementById;
 const EuClosePopup = (() => {
     let el_gaming_popup, el_accept_btn;
 
-    const onLoad = () => {
-        el_gaming_popup = getElementById('eu-close-popup');
-        el_accept_btn = getElementById('accept-btn');
-        el_gaming_popup.setVisibility(0);
-        el_accept_btn.addEventListener('click', onClosePopup);
-    };
+    // const onLoad = () => {
+    //     el_gaming_popup = getElementById('eu-close-popup');
+    //     el_accept_btn = getElementById('accept-btn');
+    //     el_gaming_popup.setVisibility(0);
+    //     el_accept_btn.addEventListener('click', onClosePopup);
+    // };
     const loginOnLoad = () => {
+        console.log(2);
         el_gaming_popup = getElementById('eu-close-popup');
         el_accept_btn = getElementById('eu-accept-btn');
         el_gaming_popup.setVisibility(1);
@@ -23,7 +24,7 @@ const EuClosePopup = (() => {
         document.body.style.overflow = 'auto';
     };
 
-    return { loginOnLoad, onLoad, onClosePopup };
+    return { loginOnLoad, onClosePopup };
 })();
 
 module.exports = EuClosePopup;
