@@ -11,8 +11,12 @@ import GamingClosePopupIom from '../components/gaming_close_popup_iom.jsx';
 import GamingClosePopup from '../components/gaming_close_popup.jsx';
 import GameCloseBanner from '../components/game_close_banner.jsx';
 import GameCloseBannerIom from '../components/game_close_banner_iom.jsx';
+<<<<<<< HEAD
 import EuCloseBanner from '../components/eu_close_banner.jsx';
 import EuClosePopup from '../components/eu_close_popup.jsx';
+=======
+import RedirectBanner from '../components/EU_UK_redirect_banner.jsx';
+>>>>>>> f19fe1e6f1fe6ed11b012b5eaf5767528c713328
 
 export const CONTENT_PLACEHOLDER = 'CONTENT_PLACEHOLDER';
 
@@ -57,7 +61,11 @@ const Layout = () => {
                         <a href='javascript:;' id='scrollup' />
                         <GameCloseBanner />
                         <GameCloseBannerIom />
+<<<<<<< HEAD
                         <EuCloseBanner />
+=======
+                        <RedirectBanner />
+>>>>>>> f19fe1e6f1fe6ed11b012b5eaf5767528c713328
                         <InnerContent />
                     </div>
                     <Footer />
