@@ -29,6 +29,7 @@ const isLoginPages     = require('../../_common/utility').isLoginPages;
 const isProduction     = require('../../config').isProduction;
 const ClosePopup = require('../common/game_close_popup');
 const EuClosePopup = require('../common/eu_close_popup');
+const EuCloseBanner = require('../common/eu_close_baner');
 const CloseBanner  = require('../common/game_close_banner');
 require('../../_common/lib/polyfills/array.includes');
 require('../../_common/lib/polyfills/string.includes');
@@ -128,6 +129,7 @@ const Page = (() => {
                 Menu.init();
                 const is_uk_residence = (Client.get('residence') === 'gb' || State.getResponse('website_status.clients_country') === 'gb');
                 const is_iom_client = (Client.get('residence') === 'im' || State.getResponse('website_status.clients_country') === 'im');
+                const is_be_client = (Client.get('residence') === 'be' || State.getResponse('website_status.clients_country') === 'be');
                 const mlt_check = ClientBase.get('landing_company_shortcode') === 'malta';
                 if (is_uk_residence && Client.hasAccountType('gaming')) {
                     CloseBanner.onLoad();
@@ -135,8 +137,9 @@ const Page = (() => {
                 } else if (is_iom_client && Client.hasAccountType('gaming')) {
                     CloseBanner.onLoad();
                     ClosePopup.loginOnLoad();
-                } else if (mlt_check) {
+                } else if (mlt_check || is_be_client) {
                     EuClosePopup.loginOnLoad();
+                    EuCloseBanner.onLoad()
                 }
             });
         } else {
