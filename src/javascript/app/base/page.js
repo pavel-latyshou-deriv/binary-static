@@ -144,7 +144,7 @@ const Page = (() => {
                     ClosePopup.loginOnLoad();
                 } else if (mlt_check || is_be_client) {
                     EuClosePopup.loginOnLoad();
-                    EuCloseBanner.onLoad()
+                    EuCloseBanner.onLoad();
                     CloseBanner.onLoad();
                 } else {
                     DerivBanner.loginOnLoad();
