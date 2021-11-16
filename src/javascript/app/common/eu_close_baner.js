@@ -9,7 +9,7 @@ const EuCloseBanner = (() => {
     const onLoad = () => {
         BinarySocket.wait('authorize', 'website_status', 'landing_company').then(() => {
             const is_be_client = (Client.get('residence') === 'be' || State.getResponse('website_status.clients_country') === 'be');
-            if (isEuCountry() || is_be_client) {
+            if (isEuCountry() || (is_be_client && Client.hasAccountType('gaming'))) {
                 el_gaming_popup = getElementById('eu-close-popup');
                 el_close_banner_container = getElementById('eu_close_banner_container');
                 el_close_banner_container.setVisibility(1);

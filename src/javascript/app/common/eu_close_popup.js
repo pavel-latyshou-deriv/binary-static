@@ -10,7 +10,6 @@ const EuClosePopup = (() => {
     //     el_accept_btn.addEventListener('click', onClosePopup);
     // };
     const loginOnLoad = () => {
-        console.log(2);
         el_gaming_popup = getElementById('eu-close-popup');
         el_accept_btn = getElementById('eu-accept-btn');
         el_gaming_popup.setVisibility(1);
