@@ -6,7 +6,7 @@ const EuClosePopup = () => (
             <div className='pop-up-header'>
                 <h3>Your Options Account is scheduled to be closed</h3>
                 <p className='subtitle'>
-                As part of the changes in our product line-up, 
+                As part of the changes in our product line-up,
                 we are closing Options Accounts belonging to our clients in Europe.
                 </p>
                 <div className='deriv_banner_close' />
