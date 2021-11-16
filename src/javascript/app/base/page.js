@@ -29,6 +29,7 @@ const isLoginPages     = require('../../_common/utility').isLoginPages;
 const isProduction     = require('../../config').isProduction;
 const ClosePopup = require('../common/game_close_popup');
 const EuClosePopup = require('../common/eu_close_popup');
+const CloseBanner  = require('../common/game_close_banner');
 require('../../_common/lib/polyfills/array.includes');
 require('../../_common/lib/polyfills/string.includes');
 
@@ -129,8 +130,10 @@ const Page = (() => {
                 const is_iom_client = (Client.get('residence') === 'im' || State.getResponse('website_status.clients_country') === 'im');
                 const mlt_check = ClientBase.get('landing_company_shortcode') === 'malta';
                 if (is_uk_residence && Client.hasAccountType('gaming')) {
+                    CloseBanner.onLoad();
                     ClosePopup.loginOnLoad();
                 } else if (is_iom_client && Client.hasAccountType('gaming')) {
+                    CloseBanner.onLoad();
                     ClosePopup.loginOnLoad();
                 } else if (mlt_check) {
                     EuClosePopup.loginOnLoad();
