@@ -628,12 +628,15 @@
 @media (max-width: 360px) {
     #eu_close_banner_container {
         justify-content: unset;
+        margin-left: 10px;
+        margin-right: 10px;
+
     }
     #eu_close_banner_container .close_banner_btn {
         position: absolute;
         left: 235px;
         margin: 10px !important;
-        width: 80px;
+        width: 60px;
         font-size: 1rem !important;
         margin-left: 8px !important;
     }
