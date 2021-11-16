@@ -143,7 +143,9 @@ const Page = (() => {
                     CloseBanner.onLoad();
                     ClosePopup.loginOnLoad();
                 } else if (mlt_check || is_be_client) {
-                    EuClosePopup.loginOnLoad();
+                    if (Client.hasAccountType('gaming')) {
+                        EuClosePopup.loginOnLoad();
+                    }
                     EuCloseBanner.onLoad();
                     CloseBanner.onLoad();
                 } else {
