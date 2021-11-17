@@ -23,8 +23,11 @@ const EuCloseBanner = (() => {
     const onShowPopup = () => {
         el_gaming_popup.setVisibility(1);
         const el_top_bar = getElementById('topbar');
+        const top_popup = getElementById('top_popup');
         el_top_bar.style.zIndex = 0;
         document.body.style.overflow = 'hidden';
+        top_popup.scrollLeft = 0;
+        top_popup.scrollTop = 0;
     };
 
     return { onLoad, onShowPopup };
