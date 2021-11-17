@@ -129,12 +129,14 @@ const Page = (() => {
             BinarySocket.wait('authorize', 'website_status', 'get_account_status').then(() => {
                 RealityCheck.onLoad();
                 RedirectBanner.loginOnLoad();
-                
                 Menu.init();
                 const is_uk_residence = (Client.get('residence') === 'gb' || State.getResponse('website_status.clients_country') === 'gb');
                 const is_iom_client = (Client.get('residence') === 'im' || State.getResponse('website_status.clients_country') === 'im');
-                const is_be_client = (Client.get('residence') === 'be' || State.getResponse('website_status.clients_country') === 'be');
+                const is_be_client = (Client.get('residence') === 'be' || State.getResponse('website_status.clients_country') === 'be') && Client.hasAccountType('gaming');
+                const is_at_client = (Client.get('residence') === 'at' || State.getResponse('website_status.clients_country') === 'at') && Client.hasAccountType('gaming');
                 const mlt_check = ClientBase.get('landing_company_shortcode') === 'malta';
+                // console.log(ClientBase.get());
+                // console.log(is_at_client);
                 if (is_uk_residence && Client.hasAccountType('gaming')) {
                     CloseBanner.onLoad();
                     ClosePopup.loginOnLoad();
@@ -142,12 +144,11 @@ const Page = (() => {
                 } else if (is_iom_client && Client.hasAccountType('gaming')) {
                     CloseBanner.onLoad();
                     ClosePopup.loginOnLoad();
-                } else if (mlt_check || is_be_client) {
-                    if (Client.hasAccountType('gaming')) {
-                        EuClosePopup.loginOnLoad();
-                    }
+                } else if (mlt_check || is_be_client || is_at_client) {
+                    // console.log((Client.hasAccountType('gaming')));
+                    EuClosePopup.loginOnLoad();
                     EuCloseBanner.onLoad();
-                    CloseBanner.onLoad();
+                    // CloseBanner.onLoad();
                 } else {
                     DerivBanner.loginOnLoad();
                 }
