@@ -381,7 +381,6 @@ const Price = (() => {
                     commonTrading.hideOverlayContainer();
                     commonTrading.hidePriceOverlay();
                     setPriceContainersVisibility(position_is_visible);
-                    return;
                 }
 
                 if (proposal.error) {
