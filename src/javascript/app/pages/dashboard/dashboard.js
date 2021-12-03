@@ -54,11 +54,11 @@ const Dashboard = (() => {
             ws         : BinarySocket,
         };
 
-        if (el_shadow_dom_dashboard) {  
-        ReactDOM.render(React.createElement(module, dashboard_props), el_shadow_dom_dashboard);
-         el_shadow_dom_dashboard.prepend(el_main_css);
-         el_loading.parentNode.removeChild(el_loading);
-         el_shadow_dom_dashboard.host.classList.remove('invisible');
+        if (el_shadow_dom_dashboard) {
+            ReactDOM.render(React.createElement(module, dashboard_props), el_shadow_dom_dashboard);
+            el_shadow_dom_dashboard.prepend(el_main_css);
+            el_loading.parentNode.removeChild(el_loading);
+            el_shadow_dom_dashboard.host.classList.remove('invisible');
         }
     };
 
