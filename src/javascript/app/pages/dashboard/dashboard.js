@@ -17,7 +17,7 @@ const Dashboard = (() => {
         const el_loading = document.getElementById('loading_dashboard');
         const el_dashboard_container = document.getElementById('binary_dashboard');
 
-        el_shadow_dom_dashboard = el_dashboard_container.attachShadow({ mode: 'open' });
+        el_shadow_dom_dashboard = el_dashboard_container && el_dashboard_container.attachShadow({ mode: 'open' });
 
         const el_main_css = document.createElement('style');
         // These are styles that are to be injected into the Shadow DOM, so they are in JS and not stylesheets
@@ -54,10 +54,12 @@ const Dashboard = (() => {
             ws         : BinarySocket,
         };
 
+        if (el_shadow_dom_dashboard) {  
         ReactDOM.render(React.createElement(module, dashboard_props), el_shadow_dom_dashboard);
-        el_shadow_dom_dashboard.prepend(el_main_css);
-        el_loading.parentNode.removeChild(el_loading);
-        el_shadow_dom_dashboard.host.classList.remove('invisible');
+         el_shadow_dom_dashboard.prepend(el_main_css);
+         el_loading.parentNode.removeChild(el_loading);
+         el_shadow_dom_dashboard.host.classList.remove('invisible');
+        }
     };
 
     return {
