@@ -596,35 +596,35 @@ const Durations = (() => {
             return;
         }
 
-        if (duration_amount === '') {
-            const contract_errors_array  = Object.values(contract_errors);
-            const purchase_buttons_array = Object.values(purchase_buttons);
-            const price_comment_array    = Object.values(price_comments);
+        // if (duration_amount === '') {
+        //     const contract_errors_array  = Object.values(contract_errors);
+        //     const purchase_buttons_array = Object.values(purchase_buttons);
+        //     const price_comment_array    = Object.values(price_comments);
 
-            purchase_buttons_array.forEach(button => button.parentNode.classList.add('button-disabled'));
-            price_comment_array.forEach(comment => comment.style.display = 'none');
-            contract_errors_array.forEach(error => {
-                CommonFunctions.elementTextContent(error, 'Enter the trade duration to know your stake and payout.');
-                error.style.display = 'block';
-            });
-        }
+        //     purchase_buttons_array.forEach(button => button.parentNode.classList.add('button-disabled'));
+        //     price_comment_array.forEach(comment => comment.style.display = 'none');
+        //     contract_errors_array.forEach(error => {
+        //         CommonFunctions.elementTextContent(error, 'Enter the trade duration to know your stake and payout.');
+        //         error.style.display = 'block';
+        //     });
+        // }
 
         const duration_min_element = CommonFunctions.getElementById('duration_minimum');
         const duration_max_element = CommonFunctions.getElementById('duration_maximum');
         duration_wrapper_element.setVisibility(1);
-        duration_stock_indices_element.setVisibility(0);
+        // duration_stock_indices_element.setVisibility(0);
 
-        if (current_market === 'Stock Indices' && duration_unit_value === 'h') {
-            const value_is_one_hour = parseInt(duration_amount) === parseInt(duration_min_element.innerText);
-            duration_stock_indices_element.setVisibility(1);
-            duration_wrapper_element.setVisibility(0);
+        // if (current_market === 'Stock Indices' && duration_unit_value === 'h') {
+        //     const value_is_one_hour = parseInt(duration_amount) === parseInt(duration_min_element.innerText);
+        //     duration_stock_indices_element.setVisibility(1);
+        //     duration_wrapper_element.setVisibility(0);
 
-            if (!value_is_one_hour) {
-                duration_stock_indices_element.classList.add('error-msg');
-            } else {
-                duration_stock_indices_element.classList.remove('error-msg');
-            }
-        }
+        //     if (!value_is_one_hour) {
+        //         duration_stock_indices_element.classList.add('error-msg');
+        //     } else {
+        //         duration_stock_indices_element.classList.remove('error-msg');
+        //     }
+        // }
 
         if (+duration_amount_element.value < +duration_min_element.textContent) {
             duration_amount_element.classList.add('error-field');
